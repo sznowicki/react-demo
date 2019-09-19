@@ -13,14 +13,18 @@
     "ssr:index": "cd ssr-demo && parcel build react-app/index.html --experimental-scope-hoisting",
     "ssr:node": "cd ssr-demo && parcel build react-app/SSRDemoComponent.jsx --target node --out-file react-component.js --out-dir server --no-minify --no-source-maps",
     "ssr:server": "cd ssr-demo && node index.js",
-    "ssr": " yarn ssr:index && yarn ssr:node && yarn ssr:server"
+    "ssr": " yarn ssr:index && yarn ssr:node && yarn ssr:server",
+    "dataFlow": "parcel data-flow/index.html"
   },
   "dependencies": {
     "express": "^4.17.1",
     "parcel": "^1.12.3",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "reselect": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^6.4.0",
