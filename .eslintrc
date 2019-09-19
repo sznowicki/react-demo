@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": ["error", {
+      "objects": "always-multiline",
+      "arrays": "always-multiline",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
+    "react/jsx-one-expression-per-line": "off",
+    "no-alert": "off",
+    "no-console": "off"
+  }
+}

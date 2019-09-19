@@ -1,0 +1,61 @@
+:root {
+  --color-background: #ffffff;
+  --color-text: #101010;
+  --shadow: 0 0 1px hsla(0, 0%, 0%, 0.5);
+  --card-background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #252525;
+    --color-text: #f4f4f4;
+    --shadow: 0 -1px 1px 0px #505050;
+    --card-background: #3e3e3c;
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin: 0
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  background: var(--card-background);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin:0 0 1em;
+  }
+}
+
+input {
+  margin: 0 .5rem;
+}
