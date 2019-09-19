@@ -15,10 +15,9 @@ const getFileContent = (path) => {
 
     filename = pathArr.slice(-1);
   }
-  console.log(filename);
+
   if (!cache[filename]) {
     try {
-      console.warn(resolve(`../dist/${filename}`));
       cache[filename] = readFileSync(resolve(`./dist/${filename}`)).toString();
       if (filename === 'index.html') {
         const componentAsAString = renderToString(createElement(reactComponent));
