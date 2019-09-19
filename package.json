@@ -9,9 +9,14 @@
   "private": true,
   "scripts": {
     "start": "parcel demo/index.html",
-    "build": "parcel build demo/index.html --experimental-scope-hoisting"
+    "build": "parcel build demo/index.html --experimental-scope-hoisting",
+    "ssr:index": "cd ssr-demo && parcel build react-app/index.html --experimental-scope-hoisting",
+    "ssr:node": "cd ssr-demo && parcel build react-app/SSRDemoComponent.jsx --target node --out-file react-component.js --out-dir server --no-minify --no-source-maps",
+    "ssr:server": "cd ssr-demo && node index.js",
+    "ssr": " yarn ssr:index && yarn ssr:node && yarn ssr:server"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "parcel": "^1.12.3",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
