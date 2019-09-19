@@ -10,6 +10,9 @@ const server = () => {
       res.status(404).send();
       return;
     }
+    if (path.includes('css')) {
+      res.type('text/css');
+    }
     res.status(200).send(content);
   });
 
